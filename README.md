@@ -104,20 +104,23 @@ This project is built with leading-edge technologies and libraries:
 
 📂 Project Directory
 The project has a straightforward structure:
-
+```
 your-repository-name/
 ├── 📄 index.html      # The main HTML file with all content
 ├── 🎨 style.css       # Custom styles, theming, and animations
 └── ⚙️ index.js        # JavaScript for all interactive features
+```
 🚀 Setup
 Since this is a pure frontend project, you don't need complex installation steps.
 
 Clone the repository:
-
+```
 git clone https://github.com/your-username/your-repository-name.git
+```
 Navigate to the project directory:
-
+```
 cd your-repository-name
+```
 Open the index.html file:
 Simply open the index.html file in your favorite web browser, and you're good to go!
 <br>
@@ -133,12 +136,13 @@ Personal Information: Open the index.html file and edit the text content directl
 Name and Titles: In the index.js file, find the initializeTyped() function to change the text strings for the typing animation.
 
 JavaScript
-
+```
 // in index.js
 new Typed('#typed-text', {
     strings: ['Your Name', 'A Developer', 'A Designer'],
     // ... other options
 });
+```
 Projects: Edit the .portfolio-item cards in index.html to add or modify your projects. Don't forget to update the images and technology tags.
 
 Skills: Change the .skill-bar elements in index.html. Adjust the inline style="width: XX%" to reflect your proficiency.
@@ -146,12 +150,13 @@ Skills: Change the .skill-bar elements in index.html. Adjust the inline style="w
 Colors and Theme: Open the style.css file. Modify the color variables in the :root and [data-theme="dark"] blocks to create a brand new look.
 
 CSS
-
+```
 /* in style.css */
 :root {
     --primary-color: #2563eb; /* Change the main accent color here */
     /* ... */
 }
+```
 <div style="background-color: #f0f7ff; border-left: 5px solid #2563eb; padding: 15px; margin-top: 20px; border-radius: 5px;">
 <p style="margin: 0; font-weight: bold; color: #2d3748;">
 Thank you for visiting! If you find this project useful, don't forget to give it a ⭐!
