@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Doe - Full Stack Developer & UI/UX Designer</title>
+    <meta name="description" content="Professional portfolio of John Doe - Full Stack Developer with 5+ years of experience in web development, mobile apps and UI/UX design">
+    <meta name="keywords" content="Full Stack Developer, UI/UX Designer, React, Vue.js, Node.js, Portfolio, Web Development">
+    <meta name="author" content="John Doe">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="John Doe - Full Stack Developer Portfolio">
+    <meta property="og:description" content="Explore my professional portfolio with 50+ completed projects and 5+ years of experience">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=630&fit=crop">
+    <meta property="og:url" content="https://yourportfolio.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="John Doe - Full Stack Developer Portfolio">
+    <meta name="twitter:description" content="Professional portfolio with 50+ completed projects">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=630&fit=crop">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iOCIgZmlsbD0idXJsKCNncmFkaWVudDApIi8+CjxwYXRoIGQ9Ik04IDEwaDE2djEySDh6IiBmaWxsPSJ3aGl0ZSIgZmlsbC1vcGFjaXR5PSIwLjIiLz4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZGllbnQwIiB4MT0iMCIgeTE9IjAiIHgyPSIzMiIgeTI9IjMyIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CjxzdG9wIHN0b3AtY29sb3I9IiM2MzY2RjEiLz4KPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjOEI1Q0Y2Ii8+CjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPC9zdmc+">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+    <!-- GSAP Animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Chart.js for Statistics -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    
+    <!-- Typed.js for better typing animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    
+    <!-- Particles.js for background effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Loading Screen -->
+    <div class="loading-overlay">
+        <div class="text-center">
+            <div class="loading-spinner mx-auto mb-4"></div>
+            <p class="text-white text-lg">Loading...</p>
+        </div>
+    </div>
+
+    <!-- Cursor Follower -->
+    <div id="cursor" class="fixed w-4 h-4 bg-emerald-500 rounded-full pointer-events-none z-50 mix-blend-difference transition-all duration-150 ease-out opacity-0"></div>
+    <div id="cursor-outline" class="fixed w-8 h-8 border-2 border-emerald-500 rounded-full pointer-events-none z-50 mix-blend-difference transition-all duration-300 ease-out opacity-0"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar-scroll fixed w-full top-0 z-50 py-4 px-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold gradient-text">
+                <a href="#home">Portfolio</a>
+            </div>
+            <div class="hidden md:flex space-x-8 nav-links">
+                <a href="#home" class="nav-link hover:text-emerald-600 transition-colors">Home</a>
+                <a href="#about" class="nav-link hover:text-emerald-600 transition-colors">About</a>
+                <a href="#skills" class="nav-link hover:text-emerald-600 transition-colors">Skills</a>
+                <a href="#portfolio" class="nav-link hover:text-emerald-600 transition-colors">Projects</a>
+                <a href="#experience" class="nav-link hover:text-emerald-600 transition-colors">Experience</a>
+                <a href="#contact" class="nav-link hover:text-emerald-600 transition-colors">Contact</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button id="darkModeToggle" class="theme-toggle-btn p-3 rounded-full transition-all duration-300 hover:bg-gray-200 hover:bg-opacity-20">
+                    <i class="fas fa-moon text-xl"></i>
+                </button>
+                <button class="md:hidden p-2" id="mobileMenuToggle">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="md:hidden hidden mt-4 pb-4">
+            <div class="flex flex-col space-y-4 px-6">
+                <a href="#home" class="hover:text-emerald-600 transition-colors">Home</a>
+                <a href="#about" class="hover:text-emerald-600 transition-colors">About</a>
+                <a href="#skills" class="hover:text-emerald-600 transition-colors">Skills</a>
+                <a href="#portfolio" class="hover:text-emerald-600 transition-colors">Projects</a>
+                <a href="#experience" class="hover:text-emerald-600 transition-colors">Experience</a>
+                <a href="#contact" class="hover:text-emerald-600 transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center gradient-bg relative overflow-hidden">
+        <!-- Particles Background -->
+        <div id="particles-js"></div>
+        
+        <!-- Animated Background Elements -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="floating absolute top-20 left-10 w-20 h-20 bg-white bg-opacity-10 rounded-full"></div>
+            <div class="floating absolute top-40 right-20 w-32 h-32 bg-white bg-opacity-10 rounded-full" style="animation-delay: -1s;"></div>
+            <div class="floating absolute bottom-20 left-1/4 w-16 h-16 bg-white bg-opacity-10 rounded-full" style="animation-delay: -2s;"></div>
+            <div class="floating absolute top-1/3 right-1/3 w-24 h-24 bg-white bg-opacity-5 rounded-full" style="animation-delay: -0.5s;"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 text-white relative z-10">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="mb-4">
+                        <span class="inline-block bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm font-medium backdrop-blur-sm">
+                            <i class="fas fa-wave-square mr-2"></i>
+                            Welcome to my portfolio
+                        </span>
+                    </div>
+                    <h1 class="hero-text text-5xl md:text-7xl font-bold mb-4 leading-tight">
+                        Hello, I'm<br>
+                        <span id="typed-text" class="gradient-text bg-white bg-clip-text text-transparent"></span>
+                    </h1>
+                    <p class="text-xl md:text-2xl mb-6 opacity-90 font-light hero-description">
+                        Full Stack Developer & UI/UX Designer
+                    </p>
+                    <p class="text-lg mb-8 opacity-80 max-w-lg leading-relaxed hero-description">
+                        I create amazing web experiences with modern technology and creative design. 
+                        Specialized in React, Node.js and UI/UX design.
+                    </p>
+                    
+                    <!-- Statistics -->
+                    <div class="grid grid-cols-3 gap-4 mb-8">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold" id="projects-counter">0</div>
+                            <div class="text-sm opacity-80">Projects</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold" id="experience-counter">0</div>
+                            <div class="text-sm opacity-80">Years Exp</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold" id="clients-counter">0</div>
+                            <div class="text-sm opacity-80">Clients</div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#portfolio" class="btn-primary text-center group">
+                            <span class="relative z-10">View Projects</span>
+                            <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                        <a href="#contact" class="border-2 border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-emerald-600 transition-all transform hover:scale-105 font-semibold text-center group">
+                            <span>Contact Me</span>
+                            <i class="fas fa-envelope ml-2 transition-transform group-hover:rotate-12"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Social Links -->
+                    <div class="flex space-x-4 mt-8">
+                        <a href="#" class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all transform hover:scale-110 hover:rotate-12">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all transform hover:scale-110 hover:rotate-12">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all transform hover:scale-110 hover:rotate-12">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all transform hover:scale-110 hover:rotate-12">
+                            <i class="fab fa-dribbble text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="relative">
+                        <!-- Decorative elements -->
+                        <div class="absolute -top-4 -left-4 w-full h-full border-4 border-white border-opacity-20 rounded-full"></div>
+                        <div class="absolute -bottom-4 -right-4 w-full h-full border-4 border-white border-opacity-20 rounded-full"></div>
+                        
+                        <!-- Gradient background -->
+                        <div class="absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full blur-3xl opacity-50"></div>
+                        
+                        <!-- Profile image -->
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" 
+                             alt="Profile" 
+                             class="relative w-80 h-80 rounded-full mx-auto object-cover border-4 border-white shadow-2xl hover:scale-105 transition-transform duration-500">
+                        
+                        <!-- Floating icons -->
+                        <div class="absolute top-10 -left-5 w-16 h-16 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center backdrop-blur-sm floating" style="animation-delay: -1s;">
+                            <i class="fab fa-react text-blue-300 text-2xl"></i>
+                        </div>
+                        <div class="absolute bottom-10 -right-5 w-16 h-16 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center backdrop-blur-sm floating" style="animation-delay: -2s;">
+                            <i class="fab fa-node-js text-green-300 text-2xl"></i>
+                        </div>
+                        <div class="absolute top-1/2 -right-8 w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur-sm floating">
+                            <i class="fas fa-palette text-purple-300 text-lg"></i>
+                        </div>
+                        <div class="absolute top-1/3 -left-8 w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur-sm floating" style="animation-delay: -0.5s;">
+                            <i class="fas fa-code text-yellow-300 text-lg"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+            <div class="flex flex-col items-center">
+                <span class="text-sm mb-2 opacity-80">Scroll down</span>
+                <div class="w-6 h-10 border-2 border-white rounded-full opacity-75">
+                    <div class="w-1 h-3 bg-white rounded-full mx-auto mt-2 animate-pulse"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Wave Divider -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden">
+            <svg class="relative block w-full h-20" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="#ffffff"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="inline-block bg-emerald-100 text-emerald-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
+                    <i class="fas fa-user mr-2"></i>About Me
+                </span>
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 gradient-text">About Me</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                    Discover my journey and passion in the technology field
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=600&h=400&fit=crop" 
+                             alt="About me" 
+                             class="rounded-2xl shadow-2xl w-full object-cover hover:scale-105 transition-transform duration-500">
+                        <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-emerald-600 rounded-2xl flex items-center justify-center">
+                            <i class="fas fa-code text-white text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left">
+                    <h3 class="text-3xl font-bold mb-6 text-gray-800">My Story</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        With over 5 years of experience in web development, I've had the opportunity to work with various technologies and participate in exciting projects. My passion is creating products that are not only beautiful but also provide excellent user experiences.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        I'm always learning and staying updated with the latest technologies to ensure my projects are modern and efficient. My goal is to help businesses succeed in digital transformation through innovative technology solutions.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="text-center p-4 bg-gradient-to-br from-blue-50 to-emerald-50 rounded-lg border border-blue-100">
+                            <h4 class="text-3xl font-bold text-emerald-600 mb-2">50+</h4>
+                            <p class="text-gray-600">Completed Projects</p>
+                        </div>
+                        <div class="text-center p-4 bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg border border-green-100">
+                            <h4 class="text-3xl font-bold text-green-600 mb-2">5+</h4>
+                            <p class="text-gray-600">Years of Experience</p>
+                        </div>
+                        <div class="text-center p-4 bg-gradient-to-br from-purple-50 to-violet-50 rounded-lg border border-purple-100">
+                            <h4 class="text-3xl font-bold text-purple-600 mb-2">30+</h4>
+                            <p class="text-gray-600">Happy Clients</p>
+                        </div>
+                        <div class="text-center p-4 bg-gradient-to-br from-orange-50 to-amber-50 rounded-lg border border-orange-100">
+                            <h4 class="text-3xl font-bold text-orange-600 mb-2">15+</h4>
+                            <p class="text-gray-600">Technologies Mastered</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#contact" class="btn-primary text-center group">
+                            <span class="relative z-10">Work With Me</span>
+                            <i class="fas fa-handshake ml-2 transition-transform group-hover:scale-110"></i>
+                        </a>
+                        <a href="#" class="border-2 border-emerald-600 text-emerald-600 px-8 py-3 rounded-full hover:bg-emerald-600 hover:text-white transition-all transform hover:scale-105 font-semibold text-center group">
+                            <span>Download CV</span>
+                            <i class="fas fa-download ml-2 transition-transform group-hover:translate-y-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="inline-block bg-emerald-100 text-emerald-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
+                    <i class="fas fa-tools mr-2"></i>Skills
+                </span>
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 gradient-text">Professional Skills</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                    Technologies and skills I use to create amazing products
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <!-- Frontend -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg card-hover border border-gray-100" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-4xl text-emerald-600 mb-4">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Frontend Development</h3>
+                    <p class="text-gray-600 mb-6">Creating interactive and responsive user interfaces with modern technology</p>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">React.js</span>
+                                <span class="text-sm text-gray-500">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Vue.js</span>
+                                <span class="text-sm text-gray-500">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">TypeScript</span>
+                                <span class="text-sm text-gray-500">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Next.js</span>
+                                <span class="text-sm text-gray-500">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Backend -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg card-hover border border-gray-100" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-4xl text-green-600 mb-4">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Backend Development</h3>
+                    <p class="text-gray-600 mb-6">Building robust APIs and secure server systems</p>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Node.js</span>
+                                <span class="text-sm text-gray-500">92%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 92%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Python</span>
+                                <span class="text-sm text-gray-500">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">MongoDB</span>
+                                <span class="text-sm text-gray-500">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">PostgreSQL</span>
+                                <span class="text-sm text-gray-500">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Design -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg card-hover border border-gray-100" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-4xl text-purple-600 mb-4">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">UI/UX Design</h3>
+                    <p class="text-gray-600 mb-6">Designing intuitive and beautiful user experiences</p>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Figma</span>
+                                <span class="text-sm text-gray-500">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Adobe XD</span>
+                                <span class="text-sm text-gray-500">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Photoshop</span>
+                                <span class="text-sm text-gray-500">82%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 82%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Sketch</span>
+                                <span class="text-sm text-gray-500">78%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 78%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Technology Stack -->
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h3 class="text-3xl font-bold mb-8">Technologies I Use</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-8">
+                    <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-all transform hover:scale-105 card-hover">
+                        <i class="fab fa-react text-4xl text-blue-500 mb-2"></i>
+                        <span class="text-sm font-medium">React</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-all transform hover:scale-105 card-hover">
+                        <i class="fab fa-vuejs text-4xl text-green-500 mb-2"></i>
+                        <span class="text-sm font-medium">Vue.js</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-all transform hover:scale-105 card-hover">
+                        <i class="fab fa-node-js text-4xl text-green-600 mb-2"></i>
+                        <span class="text-sm font-medium">Node.js</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-all transform hover:scale-105 card-hover">
+                        <i class="fab fa-python text-4xl text-yellow-500 mb-2"></i>
+                        <span class="text-sm font-medium">Python</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-all transform hover:scale-105 card-hover">
+                        <i class="fas fa-database text-4xl text-blue-600 mb-2"></i>
+                        <span class="text-sm font-medium">MongoDB</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-all transform hover:scale-105 card-hover">
+                        <i class="fab fa-aws text-4xl text-orange-500 mb-2"></i>
+                        <span class="text-sm font-medium">AWS</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-all transform hover:scale-105 card-hover">
+                        <i class="fab fa-docker text-4xl text-blue-400 mb-2"></i>
+                        <span class="text-sm font-medium">Docker</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-all transform hover:scale-105 card-hover">
+                        <i class="fab fa-git-alt text-4xl text-red-500 mb-2"></i>
+                        <span class="text-sm font-medium">Git</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="inline-block bg-emerald-100 text-emerald-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
+                    <i class="fas fa-briefcase mr-2"></i>Portfolio
+                </span>
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 gradient-text">Featured Projects</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                    Explore some of my recent projects built with modern technology
+                </p>
+            </div>
+            
+            <!-- Portfolio Filter -->
+            <div class="flex justify-center mb-12" data-aos="fade-up">
+                <div class="bg-gray-100 p-2 rounded-full">
+                    <button class="portfolio-filter px-6 py-2 rounded-full bg-emerald-600 text-white transition-all" data-filter="all">
+                        All
+                    </button>
+                    <button class="portfolio-filter px-6 py-2 rounded-full hover:bg-emerald-600 hover:text-white transition-all" data-filter="web">
+                        Web App
+                    </button>
+                    <button class="portfolio-filter px-6 py-2 rounded-full hover:bg-emerald-600 hover:text-white transition-all" data-filter="mobile">
+                        Mobile App
+                    </button>
+                    <button class="portfolio-filter px-6 py-2 rounded-full hover:bg-emerald-600 hover:text-white transition-all" data-filter="design">
+                        UI/UX Design
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Portfolio Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 portfolio-grid">
+                <!-- Project 1 -->
+                <div class="portfolio-item web project-card bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" 
+                             alt="E-commerce Platform" 
+                             class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="absolute bottom-4 left-4 right-4">
+                                <div class="flex space-x-2">
+                                    <a href="#" class="bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors transform hover:scale-110">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="#" class="bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors transform hover:scale-110">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">E-commerce Platform</h3>
+                        <p class="text-gray-600 mb-4">E-commerce platform built with React, Node.js and MongoDB. Integrated payment and modern inventory management.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">React</span>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Node.js</span>
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="portfolio-item mobile project-card bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=400&fit=crop" 
+                             alt="Task Management App" 
+                             class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="absolute bottom-4 left-4 right-4">
+                                <div class="flex space-x-2">
+                                    <a href="#" class="bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors transform hover:scale-110">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="#" class="bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors transform hover:scale-110">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Task Management App</h3>
+                        <p class="text-gray-600 mb-4">Task management app built with React Native, featuring notifications and real-time data sync.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">React Native</span>
+                            <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">Firebase</span>
+                            <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Redux</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="portfolio-item design project-card bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=600&h=400&fit=crop" 
+                             alt="Banking App Design" 
+                             class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="absolute bottom-4 left-4 right-4">
+                                <div class="flex space-x-2">
+                                    <a href="#" class="bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors transform hover:scale-110">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="#" class="bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors transform hover:scale-110">
+                                        <i class="fab fa-figma"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Banking App UI/UX</h3>
+                        <p class="text-gray-600 mb-4">Modern banking app interface design with optimal user experience and high security.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm">Figma</span>
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Adobe XD</span>
+                            <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Prototyping</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="portfolio-item web project-card bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&h=400&fit=crop" 
+                             alt="Learning Platform" 
+                             class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="absolute bottom-4 left-4 right-4">
+                                <div class="flex space-x-2">
+                                    <a href="#" class="bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors transform hover:scale-110">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="#" class="bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors transform hover:scale-110">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Online Learning Platform</h3>
+                        <p class="text-gray-600 mb-4">Online learning platform built with Vue.js, supporting video streaming and learning progress management.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Vue.js</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Express.js</span>
+                            <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="portfolio-item mobile project-card bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop" 
+                             alt="Food Delivery App" 
+                             class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="absolute bottom-4 left-4 right-4">
+                                <div class="flex space-x-2">
+                                    <a href="#" class="bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors transform hover:scale-110">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="#" class="bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors transform hover:scale-110">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Food Delivery App</h3>
+                        <p class="text-gray-600 mb-4">Food delivery app built with Flutter, featuring GPS tracking and electronic payment integration.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Flutter</span>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Dart</span>
+                            <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">Google Maps</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="portfolio-item design project-card bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1559028006-448665bd7c7f?w=600&h=400&fit=crop" 
+                             alt="Dashboard Design" 
+                             class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="absolute bottom-4 left-4 right-4">
+                                <div class="flex space-x-2">
+                                    <a href="#" class="bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors transform hover:scale-110">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="#" class="bg-white/20 backdrop-blur-sm text-white p-3 rounded-full hover:bg-white/30 transition-colors transform hover:scale-110">
+                                        <i class="fab fa-figma"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Analytics Dashboard</h3>
+                        <p class="text-gray-600 mb-4">Data analytics dashboard design with interactive charts and intuitive interface.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Data Viz</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">UX Research</span>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Figma</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12" data-aos="fade-up">
+                <a href="#contact" class="btn-primary group">
+                    <span class="relative z-10">View More Projects</span>
+                    <i class="fas fa-arrow-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="inline-block bg-emerald-100 text-emerald-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
+                    <i class="fas fa-briefcase mr-2"></i>Experience
+                </span>
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 gradient-text">Work Experience</h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                    My career journey and valuable experiences accumulated
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <!-- Timeline -->
+                <div class="relative">
+                    <!-- Timeline Line -->
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-emerald-200"></div>
+                    
+                    <!-- Experience Item 1 -->
+                    <div class="relative flex items-center mb-8" data-aos="fade-right">
+                        <div class="w-1/2 pr-8 text-right">
+                            <div class="bg-white p-6 rounded-2xl shadow-lg card-hover border border-gray-100">
+                                <div class="time-text inline-block bg-emerald-100 text-emerald-600 px-3 py-1 rounded-full text-sm font-medium mb-3">
+                                    2022 - Present
+                                </div>
+                                <h3 class="text-xl font-bold mb-2">Senior Full Stack Developer</h3>
+                                <h4 class="text-emerald-600 font-semibold mb-3">Tech Solutions Co.</h4>
+                                <p class="text-gray-600 mb-4">
+                                    Develop and maintain large-scale web applications, manage a team of 5 developers, 
+                                    optimize system performance and implement CI/CD pipeline.
+                                </p>
+                                <div class="flex flex-wrap gap-2 justify-end">
+                                    <span class="tech-stack bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">React</span>
+                                    <span class="tech-stack bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs">Node.js</span>
+                                    <span class="tech-stack bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs">AWS</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-emerald-600 rounded-full border-4 border-white shadow-lg"></div>
+                        <div class="w-1/2 pl-8"></div>
+                    </div>
+                    
+                    <!-- Experience Item 2 -->
+                    <div class="relative flex items-center mb-8" data-aos="fade-left">
+                        <div class="w-1/2 pr-8"></div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-emerald-600 rounded-full border-4 border-white shadow-lg"></div>
+                        <div class="w-1/2 pl-8">
+                            <div class="bg-white p-6 rounded-2xl shadow-lg card-hover border border-gray-100">
+                                <div class="time-text inline-block bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm font-medium mb-3">
+                                    2020 - 2022
+                                </div>
+                                <h3 class="text-xl font-bold mb-2">Frontend Developer</h3>
+                                <h4 class="text-green-600 font-semibold mb-3">Digital Agency Ltd.</h4>
+                                <p class="text-gray-600 mb-4">
+                                    Built responsive user interfaces for e-commerce websites, 
+                                    optimized SEO and improved user experience, increased conversion rate by 40%.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="tech-stack bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Vue.js</span>
+                                    <span class="tech-stack bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs">JavaScript</span>
+                                    <span class="tech-stack bg-pink-100 text-pink-800 px-2 py-1 rounded-full text-xs">SASS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Experience Item 3 -->
+                    <div class="relative flex items-center mb-8" data-aos="fade-right">
+                        <div class="w-1/2 pr-8 text-right">
+                            <div class="bg-white p-6 rounded-2xl shadow-lg card-hover border border-gray-100">
+                                <div class="time-text inline-block bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm font-medium mb-3">
+                                    2019 - 2020
+                                </div>
+                                <h3 class="text-xl font-bold mb-2">UI/UX Designer</h3>
+                                <h4 class="text-purple-600 font-semibold mb-3">Creative Studio</h4>
+                                <p class="text-gray-600 mb-4">
+                                    Designed interfaces and user experiences for mobile and web applications, 
+                                    researched user behavior and created effective interactive prototypes.
+                                </p>
+                                <div class="flex flex-wrap gap-2 justify-end">
+                                    <span class="tech-stack bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs">Figma</span>
+                                    <span class="tech-stack bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs">Adobe XD</span>
+                                    <span class="tech-stack bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Sketch</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-emerald-600 rounded-full border-4 border-white shadow-lg"></div>
+                        <div class="w-1/2 pl-8"></div>
+                    </div>
+                    
+                    <!-- Experience Item 4 -->
+                    <div class="relative flex items-center" data-aos="fade-left">
+                        <div class="w-1/2 pr-8"></div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-emerald-600 rounded-full border-4 border-white shadow-lg"></div>
+                        <div class="w-1/2 pl-8">
+                            <div class="bg-white p-6 rounded-2xl shadow-lg card-hover border border-gray-100">
+                                <div class="time-text inline-block bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-sm font-medium mb-3">
+                                    2018 - 2019
+                                </div>
+                                <h3 class="text-xl font-bold mb-2">Junior Web Developer</h3>
+                                <h4 class="text-orange-600 font-semibold mb-3">Startup Inc.</h4>
+                                <p class="text-gray-600 mb-4">
+                                    Started my career developing websites using HTML, CSS, JavaScript. 
+                                    Learned and developed programming skills in a dynamic startup environment.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="tech-stack bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs">HTML/CSS</span>
+                                    <span class="tech-stack bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs">JavaScript</span>
+                                    <span class="tech-stack bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs">PHP</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Education & Certifications -->
+            <div class="mt-20">
+                <div class="text-center mb-12" data-aos="fade-up">
+                    <h3 class="text-3xl font-bold mb-4">Education & Certifications</h3>
+                    <p class="text-gray-600 text-lg">Academic background and professional certifications</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="bg-white p-6 rounded-2xl shadow-lg card-hover border border-gray-100" data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-graduation-cap text-emerald-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold">Bachelor of Computer Science</h4>
+                                <p class="text-gray-600">University of Technology</p>
+                                <p class="text-gray-500 text-sm">2014 - 2018</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">
+                            Software Engineering major, GPA: 3.8/4.0. 
+                            Participated in many research projects and extracurricular activities.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-2xl shadow-lg card-hover border border-gray-100" data-aos="fade-up" data-aos-delay="200">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-certificate text-green-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold">AWS Certified Solutions Architect</h4>
+                                <p class="text-gray-600">Amazon Web Services</p>
+                                <p class="text-gray-500 text-sm">2023</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">
+                            AWS Solutions Architect certification, specialized in 
+                            cloud infrastructure and best practices.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-2xl shadow-lg card-hover border border-gray-100" data-aos="fade-up" data-aos-delay="300">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fab fa-google text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold">Google UX Design Certificate</h4>
+                                <p class="text-gray-600">Google Career Certificates</p>
+                                <p class="text-gray-500 text-sm">2022</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">
+                            User experience design certificate from Google, 
+                            including user research, wireframing and prototyping.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-2xl shadow-lg card-hover border border-gray-100" data-aos="fade-up" data-aos-delay="400">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-code text-purple-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold">Meta Frontend Developer</h4>
+                                <p class="text-gray-600">Meta (Facebook)</p>
+                                <p class="text-gray-500 text-sm">2021</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">
+                            Specialized certificate program on React, Redux, 
+                            and modern frontend technologies.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 gradient-bg">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="inline-block bg-white bg-opacity-20 text-white px-4 py-2 rounded-full text-sm font-medium mb-4 backdrop-blur-sm">
+                    <i class="fas fa-envelope mr-2"></i>Contact
+                </span>
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">Contact Me</h2>
+                <p class="text-white text-lg max-w-2xl mx-auto opacity-90">
+                    Ready to start your next project? Let's get in touch to discuss your ideas
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <!-- Contact Info -->
+                <div data-aos="fade-right">
+                    <h3 class="text-3xl font-bold text-white mb-8">Contact Information</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center glass-effect p-4 rounded-lg hover:bg-white hover:bg-opacity-20 transition-colors">
+                            <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-envelope text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold">Email</h4>
+                                <p class="text-white opacity-80">contact@example.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center glass-effect p-4 rounded-lg hover:bg-white hover:bg-opacity-20 transition-colors">
+                            <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-phone text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold">Phone</h4>
+                                <p class="text-white opacity-80">+1 234 567 890</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center glass-effect p-4 rounded-lg hover:bg-white hover:bg-opacity-20 transition-colors">
+                            <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-map-marker-alt text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold">Location</h4>
+                                <p class="text-white opacity-80">New York, USA</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center glass-effect p-4 rounded-lg hover:bg-white hover:bg-opacity-20 transition-colors">
+                            <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-clock text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-semibold">Working Hours</h4>
+                                <p class="text-white opacity-80">Mon-Fri: 9:00 - 18:00</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Links -->
+                    <div class="mt-8">
+                        <h4 class="text-white font-semibold mb-4">Connect with me</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all transform hover:scale-110">
+                                <i class="fab fa-linkedin text-white text-xl"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all transform hover:scale-110">
+                                <i class="fab fa-github text-white text-xl"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all transform hover:scale-110">
+                                <i class="fab fa-twitter text-white text-xl"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition-all transform hover:scale-110">
+                                <i class="fab fa-dribbble text-white text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div data-aos="fade-left">
+                    <form class="glass-effect p-8 rounded-2xl" id="contactForm">
+                        <div class="grid md:grid-cols-2 gap-4 mb-4">
+                            <div>
+                                <label class="block text-white font-semibold mb-2">Full Name *</label>
+                                <input type="text" required class="w-full px-4 py-3 bg-white bg-opacity-20 border border-white border-opacity-30 rounded-lg text-white placeholder-white placeholder-opacity-70 focus:outline-none focus:border-opacity-100 transition-all" placeholder="Enter your full name">
+                            </div>
+                            <div>
+                                <label class="block text-white font-semibold mb-2">Email *</label>
+                                <input type="email" required class="w-full px-4 py-3 bg-white bg-opacity-20 border border-white border-opacity-30 rounded-lg text-white placeholder-white placeholder-opacity-70 focus:outline-none focus:border-opacity-100 transition-all" placeholder="your@email.com">
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="block text-white font-semibold mb-2">Phone Number</label>
+                            <input type="tel" class="w-full px-4 py-3 bg-white bg-opacity-20 border border-white border-opacity-30 rounded-lg text-white placeholder-white placeholder-opacity-70 focus:outline-none focus:border-opacity-100 transition-all" placeholder="+1 234 567 890">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="block text-white font-semibold mb-2">Subject *</label>
+                            <select required class="w-full px-4 py-3 bg-white bg-opacity-20 border border-white border-opacity-30 rounded-lg text-white focus:outline-none focus:border-opacity-100 transition-all">
+                                <option value="" class="text-gray-800">Choose a subject</option>
+                                <option value="web-development" class="text-gray-800">Web Development</option>
+                                <option value="mobile-app" class="text-gray-800">Mobile Application</option>
+                                <option value="ui-ux-design" class="text-gray-800">UI/UX Design</option>
+                                <option value="consultation" class="text-gray-800">Technical Consultation</option>
+                                <option value="other" class="text-gray-800">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label class="block text-white font-semibold mb-2">Message *</label>
+                            <textarea required rows="5" class="w-full px-4 py-3 bg-white bg-opacity-20 border border-white border-opacity-30 rounded-lg text-white placeholder-white placeholder-opacity-70 focus:outline-none focus:border-opacity-100 transition-all resize-none" placeholder="Describe your project or requirements in detail..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-white text-emerald-600 py-3 rounded-lg font-semibold hover:bg-gray-100 transform hover:scale-105 transition-all group">
+                            <i class="fas fa-paper-plane mr-2 transition-transform group-hover:translate-x-1"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 gradient-text">Portfolio</h3>
+                    <p class="text-gray-400 mb-4">
+                        Creating amazing web experiences with modern technology and creative design.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors transform hover:scale-110">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors transform hover:scale-110">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors transform hover:scale-110">
+                            <i class="fab fa-dribbble text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Web Development</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Mobile Applications</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">UI/UX Design</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Technical Consulting</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#about" class="hover:text-white transition-colors">About</a></li>
+                        <li><a href="#portfolio" class="hover:text-white transition-colors">Projects</a></li>
+                        <li><a href="#experience" class="hover:text-white transition-colors">Experience</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i>
+                            contact@example.com
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-2"></i>
+                            +1 234 567 890
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            New York, USA
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="border-gray-700 my-8">
+            
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">
+                    © 2024 Portfolio. All rights reserved.
+                </p>
+                <div class="flex space-x-6 text-gray-400 text-sm">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                    <a href="#" class="hover:text-white transition-colors">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-emerald-600 text-white w-12 h-12 rounded-full shadow-lg hover:bg-emerald-700 transition-all transform hover:scale-110 opacity-0 pointer-events-none z-50">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="index.js"></script>
+</body>
+</html>
