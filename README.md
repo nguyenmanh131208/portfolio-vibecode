@@ -23,7 +23,7 @@ This is a vibecode project written by AI.
 
 <div align="center" style="margin-top: 20px; margin-bottom: 20px;">
 <p><em>Screenshot of the portfolio page.</em></p>
-<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200" alt="Project Screenshot" style="width: 80%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+<img src="https://github.com/user-attachments/assets/fa74c54c-dc88-4b22-a6a9-5cf87435b378" alt="Project Screenshot" style="width: 80%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
 </div>
 
 📖 About The Project
