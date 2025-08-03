@@ -115,11 +115,11 @@ Since this is a pure frontend project, you don't need complex installation steps
 
 Clone the repository:
 ```
-git clone https://github.com/your-username/your-repository-name.git
+git clone [https://github.com/your-username/your-repository-name.git](https://github.com/nguyenmanh131208/portfolio-vibecode.git)
 ```
 Navigate to the project directory:
 ```
-cd your-repository-name
+cd portfolio-vibecode
 ```
 Open the index.html file:
 Simply open the index.html file in your favorite web browser, and you're good to go!
