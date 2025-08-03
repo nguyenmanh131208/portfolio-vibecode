@@ -119,7 +119,7 @@ git clone [https://github.com/your-username/your-repository-name.git](https://gi
 ```
 Navigate to the project directory:
 ```
-cd portfolio-vibecode
+cd portfolio-vibecode-main
 ```
 Open the index.html file:
 Simply open the index.html file in your favorite web browser, and you're good to go!
