@@ -115,7 +115,7 @@ Since this is a pure frontend project, you don't need complex installation steps
 
 Clone the repository:
 ```
-git clone [https://github.com/your-username/your-repository-name.git](https://github.com/nguyenmanh131208/portfolio-vibecode.git)
+git clone https://github.com/nguyenmanh131208/portfolio-vibecode.git
 ```
 Navigate to the project directory:
 ```
